@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-serif: "Georgia", serif;
+  --color-accent: #00E5FF;
+  --color-background: #0A0A0B;
+  --color-foreground: #FFFFFF;
+  --color-muted: #666666;
+  --color-border: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    @apply font-sans antialiased selection:bg-accent selection:text-[#0A0A0B];
+  }
+}
+
+.horizontal-line {
+  height: 1px;
+  background-color: var(--color-border);
+}
