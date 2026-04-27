@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
+import portImage from '../assets/portimage.png';
 
 export function Hero() {
   const { scrollY } = useScroll();
@@ -23,7 +24,7 @@ export function Hero() {
            className="absolute -right-[20%] sm:-right-[25%] md:-right-[15%] lg:-right-[5%] xl:-right-[10%] top-[40%] md:top-[35%] transform -translate-y-1/2 z-0 opacity-40 md:opacity-60 xl:opacity-80 pointer-events-none"
         >
           <img 
-            src="/portimage.png" 
+            src={portImage} 
             alt="Developer Graphic"
             className="w-[300px] sm:w-[450px] md:w-[650px] lg:w-[800px] xl:w-[950px] object-contain drop-shadow-[0_0_50px_rgba(0,229,255,0.3)]"
           />
