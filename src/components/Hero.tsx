@@ -15,28 +15,28 @@ export function Hero() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="flex flex-col justify-center py-20 relative"
     >
-      <motion.div style={{ y: yTitle }} className="relative w-full flex items-center min-h-[250px] sm:min-h-[300px] md:min-h-[450px]">
-        {/* Background Image overlapping behind the text */}
-        <motion.div
-           initial={{ opacity: 0, scale: 0.8 }}
-           animate={{ opacity: 1, scale: 1 }}
-           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-           className="absolute -right-[20%] sm:-right-[25%] md:-right-[15%] lg:-right-[5%] xl:-right-[10%] top-[40%] md:top-[35%] transform -translate-y-1/2 z-0 opacity-40 md:opacity-60 xl:opacity-80 pointer-events-none"
-        >
-          <img 
-            src={portImage} 
-            alt="Developer Graphic"
-            className="w-[300px] sm:w-[450px] md:w-[650px] lg:w-[800px] xl:w-[950px] object-contain drop-shadow-[0_0_50px_rgba(0,229,255,0.3)]"
-          />
-        </motion.div>
-
+      <motion.div style={{ y: yTitle }} className="relative w-full flex flex-col md:flex-row items-center justify-between min-h-[250px] sm:min-h-[300px] md:min-h-[450px]">
         {/* Foreground Text */}
         <motion.h1 
-          className="text-[40px] sm:text-[50px] md:text-[90px] lg:text-[100px] xl:text-[110px] leading-[0.85] font-[900] tracking-[-2px] md:tracking-[-4px] uppercase mb-5 text-white z-10 relative whitespace-nowrap drop-shadow-2xl"
+          className="text-[40px] sm:text-[50px] md:text-[80px] lg:text-[100px] leading-[0.85] font-[900] tracking-[-2px] md:tracking-[-4px] uppercase mb-5 text-white z-10 relative whitespace-nowrap drop-shadow-2xl flex-shrink-0"
         >
           <span className="block">SARAVANA</span>
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white to-white/70">KUMAR M</span>
         </motion.h1>
+
+        {/* Background Image overlapping behind the text */}
+        <motion.div
+           initial={{ opacity: 0, x: 50 }}
+           animate={{ opacity: 1, x: 0 }}
+           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+           className="relative z-0 opacity-90 md:opacity-100 pointer-events-none flex justify-end w-full md:w-auto -mt-10 md:mt-0 md:-ml-20"
+        >
+          <img 
+            src={portImage} 
+            alt="Developer Graphic"
+            className="w-[280px] sm:w-[350px] md:w-[450px] lg:w-[550px] object-contain drop-shadow-[0_0_50px_rgba(0,229,255,0.3)]"
+          />
+        </motion.div>
       </motion.div>
       
       <motion.div style={{ y: yDesc }}>
