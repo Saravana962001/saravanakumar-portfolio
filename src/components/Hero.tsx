@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
-import portImage from '../assets/portimage.png';
+import portImage from '../portimage.png';
 
 export function Hero() {
   const { scrollY } = useScroll();
